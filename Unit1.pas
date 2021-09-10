@@ -210,7 +210,7 @@ procedure TMain.SaveAsBtnClick(Sender: TObject);
 var
   TextFile: TStringList;
 begin
-  if not SaveDialog.Execute then Exit;
+  if not SaveDialog.Execute then SaveBtn.Click;
   TextFile:=TStringList.Create;
   if StatusBar.Panels[4].Text = 'UTF-8' then
     TextFile.Text:=AnsiToUTF8(Memo.Text)
